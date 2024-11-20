@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sells Taiwanese snacks.">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="items.css">
+</head>
+<body>
+    <header>
+        <p style="font-size:xx-large">Checkout</p>
+    </header>
+    <nav>
+        <div>
+            <a href="index.html" >Home </a>
+            <div class="dropdown">
+                <a href="#">Categories</a>
+                <div class="dropdown-content">
+                  <a href="ShopAll.html">Shop all</a>
+                  <a href="Snacks.html">Snacks</a>
+                  <a href="Drink.html">Drinks</a>
+                  <a href="noodle.html">Instant Noodles</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div>
+            <a href="login.html">Log in</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </nav>
+    <div class="product-page">
+        <div class="product-info" style="text-align:center">
+            <p style="font-size:x-large; color:#333">Placing order...</p><br>
+            <form style="font-size: larger;">
+                <p>---------- Shipping information ----------</p>
+                <input type="text" id="fname" name="fname" size="20" style="font-size: large;" placeholder="First name" required>
+                &ensp;
+                <input type="text" id="lname" name="lname" size="20" style="font-size: large;" placeholder="Last name" required><br><br>
+                <input type="text" id="address" name="address" size="44"placeholder="Street Address" style="font-size: large;" required><br><br>
+                <input type="text" id="address2" name="address2" size="44"placeholder="Street Address 2 (Optional)" style="font-size: large;"><br><br>
+                <input type="text" id="city" name="city" size="10" placeholder="City" style="font-size: large;" required>
+                &emsp;
+                <select name="state" id="state" style="font-size: large;" required>
+                    <option value="" selected disabled hidden>-- State --</option>
+                    <option value="alabama">Alabama</option>
+                    <option value="alaska">Alaska</option>
+                    <option value="arizona">Arizona</option>
+                    <option value="arkansas">Arkansas</option>
+                    <option value="california">California</option>
+                    <option value="colorado">Colorado</option>
+                    <option value="connecticut">Connecticut</option>
+                    <option value="delaware">Delaware</option>
+                    <option value="florida">Florida</option>
+                    <option value="georgia">Georgia</option>
+                    <option value="hawaii">Hawaii</option>
+                    <option value="idaho">Idaho</option>
+                    <option value="illinois">Illinois</option>
+                    <option value="indiana">Indiana</option>
+                    <option value="iowa">Iowa</option>
+                    <option value="kansas">Kansas</option>
+                    <option value="kentucky">Kentucky</option>
+                    <option value="louisiana">Louisiana</option>
+                    <option value="maine">Maine</option>
+                    <option value="maryland">Maryland</option>
+                    <option value="massachusetts">Massachusetts</option>
+                    <option value="michigan">Michigan</option>
+                    <option value="minnesota">Minnesota</option>
+                    <option value="mississippi">Mississippi</option>
+                    <option value="missouri">Missouri</option>
+                    <option value="montana">Montana</option>
+                    <option value="nebraska">Nebraska</option>
+                    <option value="nevada">Nevada</option>
+                    <option value="newhampshire">New Hampshire</option>
+                    <option value="newjersey">New Jersey</option>
+                    <option value="newmexico">New Mexico</option>
+                    <option value="newyork">New York</option>
+                    <option value="northcarolina">North Carolina</option>
+                    <option value="northdakota">North Dakota</option>
+                    <option value="ohio">Ohio</option>
+                    <option value="oklahoma">Oklahoma</option>
+                    <option value="oregon">Oregon</option>
+                    <option value="pennsylvania">Pennsylvania</option>
+                    <option value="rhodeisland">Rhode Island</option>
+                    <option value="southcarolina">South Carolina</option>
+                    <option value="southdakota">South Dakota</option>
+                    <option value="tennessee">Tennessee</option>
+                    <option value="texas">Texas</option>
+                    <option value="utah">Utah</option>
+                    <option value="vermont">Vermont</option>
+                    <option value="virginia">Virginia</option>
+                    <option value="washington">Washington</option>
+                    <option value="westvirginia">West Virginia</option>
+                    <option value="wisconsin">Wisconsin</option>
+                    <option value="wyoming">Wyoming</option>
+                </select>
+                &emsp;
+                <input type="text" id="zipcode" name="zipcode" size="8" placeholder="Zipcode" style="font-size: large;" pattern="[0-9]{5}" required><br><br>
+                <input type="tel" id="phone" name="phone" size="44" placeholder="Phone number" style="font-size: large;" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+                <p>---------- Credit card information ----------</p>
+                <input type="cardnumber" id="cardnumber" name="cardnumber" size="44" placeholder="Card number" style="font-size: large;" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required><br><br>
+                <input type="text" id="expirationdate" name="expirationdate" size="20" placeholder="Expiration date (MM/YY)" style="font-size: large;" pattern="[0-9]{2}/[0-9]{2}" required>
+                &ensp;
+                <input type="text" id="cvc" name="cvc" size="20" placeholder="CVV/CVC" style="font-size: large;" pattern="[0-9]{3}" required><br><br>
+                <input type="text" id="cardname" name="cardname" size="44" placeholder="Name on card" style="font-size: large;" required><br><br>
+                <p style="font-size:small">---------- billing address ----------</p>
+                <input type="text" id="address" name="address" size="44"placeholder="Street Address" style="font-size: large;" required><br><br>
+                <input type="text" id="address2" name="address2" size="44"placeholder="Street Address 2 (Optional)" style="font-size: large;" required><br><br>
+                <input type="text" id="city" name="city" size="10" placeholder="City" style="font-size: large;" required>
+                &emsp;
+                <select name="state" id="state" style="font-size: large;" required>
+                    <option value="" selected disabled hidden>-- State --</option>
+                    <option value="alabama">Alabama</option>
+                    <option value="alaska">Alaska</option>
+                    <option value="arizona">Arizona</option>
+                    <option value="arkansas">Arkansas</option>
+                    <option value="california">California</option>
+                    <option value="colorado">Colorado</option>
+                    <option value="connecticut">Connecticut</option>
+                    <option value="delaware">Delaware</option>
+                    <option value="florida">Florida</option>
+                    <option value="georgia">Georgia</option>
+                    <option value="hawaii">Hawaii</option>
+                    <option value="idaho">Idaho</option>
+                    <option value="illinois">Illinois</option>
+                    <option value="indiana">Indiana</option>
+                    <option value="iowa">Iowa</option>
+                    <option value="kansas">Kansas</option>
+                    <option value="kentucky">Kentucky</option>
+                    <option value="louisiana">Louisiana</option>
+                    <option value="maine">Maine</option>
+                    <option value="maryland">Maryland</option>
+                    <option value="massachusetts">Massachusetts</option>
+                    <option value="michigan">Michigan</option>
+                    <option value="minnesota">Minnesota</option>
+                    <option value="mississippi">Mississippi</option>
+                    <option value="missouri">Missouri</option>
+                    <option value="montana">Montana</option>
+                    <option value="nebraska">Nebraska</option>
+                    <option value="nevada">Nevada</option>
+                    <option value="newhampshire">New Hampshire</option>
+                    <option value="newjersey">New Jersey</option>
+                    <option value="newmexico">New Mexico</option>
+                    <option value="newyork">New York</option>
+                    <option value="northcarolina">North Carolina</option>
+                    <option value="northdakota">North Dakota</option>
+                    <option value="ohio">Ohio</option>
+                    <option value="oklahoma">Oklahoma</option>
+                    <option value="oregon">Oregon</option>
+                    <option value="pennsylvania">Pennsylvania</option>
+                    <option value="rhodeisland">Rhode Island</option>
+                    <option value="southcarolina">South Carolina</option>
+                    <option value="southdakota">South Dakota</option>
+                    <option value="tennessee">Tennessee</option>
+                    <option value="texas">Texas</option>
+                    <option value="utah">Utah</option>
+                    <option value="vermont">Vermont</option>
+                    <option value="virginia">Virginia</option>
+                    <option value="washington">Washington</option>
+                    <option value="westvirginia">West Virginia</option>
+                    <option value="wisconsin">Wisconsin</option>
+                    <option value="wyoming">Wyoming</option>
+                </select>
+                &emsp;
+                <input type="text" id="zipcode" name="zipcode" size="8" placeholder="Zipcode" style="font-size: large;" pattern="[0-9]{5}" required><br><br>
+                <button onclick="submit">Place my order</button>
+            </form>
+        </div>
+    </div>
+</body>

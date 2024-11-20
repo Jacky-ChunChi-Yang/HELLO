@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sells Taiwanese snacks">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="items.css">
+</head>
+<body>
+    <header>
+        <p style="font-size:xx-large">Login</p>
+    </header>
+    <nav>
+        <div>
+            <a href="index.html" >Home </a>
+            <div class="dropdown">
+                <a href="#">Categories</a>
+                <div class="dropdown-content">
+                  <a href="ShopAll.html">Shop all</a>
+                  <a href="Snacks.html">Snacks</a>
+                  <a href="Drink.html">Drinks</a>
+                  <a href="noodle.html">Instant Noodles</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div>
+            <a href="login.html">Log in</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </nav>
+    <div class="product-page">
+        <div class="product-info" style="text-align:center">
+            <p style="font-size:x-large; color:#333">Login here :]</p>
+            <form style="font-size: larger;">
+                <input type="text" id="username" name="username" size="30" placeholder="Username" style="font-size: large;" required><br><br>
+                <input type="password" id="password" name="password" size="30" placeholder="Password" style="font-size: large;" required><br><br>
+                <button onclick="submit">Sign in</button>
+            </form>
+            <br><br><p>---------- Don't have an account? Sign up here! ----------</p>
+            <button onclick="location.href='signup.html';">Create new account </button>
+        </div>
+    </div>
+
+</body>

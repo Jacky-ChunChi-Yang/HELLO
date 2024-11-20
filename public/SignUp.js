@@ -1,0 +1,1 @@
+document.onsubmit = (e) => {e.preventdefault(); console.log(e)};

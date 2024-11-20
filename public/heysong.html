@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - henppy Taiwaness Snack</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="items.css">
+</head>
+<body>
+
+    <!-- heading -->
+    <header>
+        <p style="font-size:xx-large">henppy Taiwaness Snack</p>
+    </header>
+
+    <!-- nav -->
+    <nav>
+        <div>
+            <a href="index.html" >Home </a>
+            <div class="dropdown">
+                <a href="#">Categories</a>
+                <div class="dropdown-content">
+                  <a href="ShopAll.html">Shop all</a>
+                  <a href="Snacks.html">Snacks</a>
+                  <a href="Drink.html">Drinks</a>
+                  <a href="noodle.html">Instant Noodles</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div>
+            <a href="login.html">Log in</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </nav>
+
+    <!-- product -->
+    <div class="product-page">
+        <!-- pic -->
+        <div class="product-gallery">
+            <div class="gallery-track">
+                <div class="gallery-item"><img src="pic/drinks/heysong_small.png" alt="small"></div>
+                <div class="gallery-item"><img src="pic/drinks/heysong_small_6.png" alt="small(6)"></div>
+                <div class="gallery-item"><img src="pic/drinks/heysong_big.png" alt="big"></div>
+                <div class="gallery-item"><img src="pic/drinks/heysong_salt_small.png" alt="salt_small"></div>
+                <div class="gallery-item"><img src="pic/drinks/heysong_salt-small_6.png" alt="salt-small_6"></div>
+                <div class="gallery-item"><img src="pic/drinks/heysong_salt_big.png" alt="salt_big"></div>
+            </div>
+            <button class="gallery-control prev" onclick="prevSlide()">❮</button>
+            <button class="gallery-control next" onclick="nextSlide()">❯</button>
+        </div>
+
+        <!-- info -->
+        <div class="product-info">
+            <h1>HeySong sarsaparilla</h1>
+            <p>$1.50</p>
+            <div class="product-options">
+                <div class="option-group">
+                    <label for="flavor">Flavor:</label>
+                    <select id="flavor">
+                        <option value="original">Original</option>
+                        <option value="salt">salt</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="package">Package:</label>
+                    <select id="package">
+                        <option value="heysong Can">Can ($1.50)</option>
+                        <option value="heysong pack">Pack of 6 ($8.5)</option>
+                        <option value="heysong Big Bottle">Big Bottle ($3)</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                </div>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div id="message-container" style="margin-top: 10px; font-size: 1rem;"></div>
+    </div>
+
+    <footer>
+        <p style="font-size:small">&copy; 2024 CSC 317-02 JEM group project </p>
+    </footer>
+
+    <!-- JS(not done yet) -->
+    <script src="script.js"></script>
+</body>
+</html>
