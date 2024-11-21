@@ -10,6 +10,7 @@ CREATE TABLE Users (
 );
 
 CREATE TABLE Products (
+    product_type VARCHAR(100),
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(100) NOT NULL,
     description TEXT,
@@ -31,10 +32,10 @@ INSERT INTO Categories (category_name) VALUES
 ('Drinks'), 
 ('Instant Noodles');
 
-INSERT INTO Products (product_name, description, price, category_id, stock, image_url) VALUES 
-('Apple Soda Can', 'Refreshing apple soda in a can.', 1.25, 2, 100, 'pic/drinks/apple_small.png'),
-('Apple Soda Pack of 6', 'Pack of 6 cans of Apple Sidra.', 5.99, 2, 50, 'pic/drinks/apple_small_6.png'),
-('Apple Soda Big Bottle', 'Large bottle of Apple Sidra.', 4.99, 2, 30, 'pic/drinks/apple_big.png');
+INSERT INTO Products (product_type, product_name, description, price, category_id, stock, image_url) VALUES 
+('original','Apple Soda Can', 'Refreshing apple soda in a can.', 1.25, 2, 100, 'pic/drinks/apple_small.png'),
+('original','Apple Soda Pack of 6', 'Pack of 6 cans of Apple Sidra.', 5.99, 2, 50, 'pic/drinks/apple_small_6.png'),
+('original','Apple Soda Big Bottle', 'Large bottle of Apple Sidra.', 4.99, 2, 30, 'pic/drinks/apple_big.png');
 
 
 CREATE TABLE Orders (
