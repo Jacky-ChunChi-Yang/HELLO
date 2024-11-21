@@ -27,7 +27,7 @@ connection.connect((err) => {
 });
 
 app.use(express.static(StaticDirectory));
-
+app.use(express.json());
 
 // Example API endpoint to query MySQL
 app.get('/data', (req, res) => {
@@ -41,21 +41,30 @@ app.get('/data', (req, res) => {
     });
 });
 
-app.post('/insert', (req, res) => {
-    connection.query(req.body, (err, result) => {
+app.post('/login', (req, res) => {
+    let username = req.body.un
+    
+    let r = -1
+    connection.query(`select password_hash, user_id from users where username = "${username}"`, (err, result) => {
         if (err) {
-            console.error('Error inserting data into MySQL:', err);
-            res.status(500).send('Error inserting data');
-        } else {
-            console.log('Data inserted successfully:', result);
-            res.status(200).send('Data inserted successfully');
+            console.error('Error executing query:', err);
+            return res.status(500).send('Error executing query');
         }
+        console.log((result[0].password_hash === req.body.pw), req.body.pw, result[0].password_hash)
+        if (result[0].password_hash === req.body.pw) {
+            r = result[0].user_id
+            console.log(r)
+        }
+        console.log(r)
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ id: r }));
     });
+    
 });
 
 app.post('/executeQuery', (req, res) => {
+    console.log(req)
     const sqlQuery = req.body.query;  // Extract the query string from the request body
-
     if (!sqlQuery) {
         return res.status(400).send('No query provided');
     }
@@ -71,7 +80,6 @@ app.post('/executeQuery', (req, res) => {
         res.status(200).send('Query executed successfully');
     });
 });
-
 
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}/`);
