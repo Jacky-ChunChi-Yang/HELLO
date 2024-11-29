@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Update the displayed price
-        priceDisplay.textContent = `$${price.toFixed(2)}`;
+        priceDisplay.textContent = `${price.toFixed(2)}`;
     };
 
     // Add event listener for package selection change
@@ -130,13 +130,6 @@ document.querySelector(".add-to-cart").addEventListener("click", () => {
         messageContainer.style.color = "red";
         return;
     }
-
-    const cartCountElement = document.querySelector("nav a[href='cart.html']");
-    const currentCartCount = parseInt(cartCountElement.textContent.match(/\d+/)[0]);
-    const newCartCount = currentCartCount + quantity;
-
-    // Update cart count in the navigation
-    cartCountElement.textContent = `Cart (${newCartCount})`;
 
     // Display success message
     messageContainer.textContent = `Successfully added ${quantity} item(s) of ${packageOption} (${flavor}) to the cart.`;

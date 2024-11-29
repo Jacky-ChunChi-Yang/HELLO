@@ -7,6 +7,7 @@
     <title>Cart</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="items.css">
+    <script src="./cart.js" defer></script> 
 </head>
 <body>
     <header>
@@ -29,13 +30,19 @@
         </div>
         <div>
             <a href="login.html">Log in</a>
-            <a href="cart.html">Cart (0)</a>
+            <a href="cart.html">Cart</a>
         </div>
     </nav>
     <div class="product-page">
         <div class="product-info" style="text-align:center">
             <p style="font-size:x-large; color:#333">Cart</p>
             <button onclick="location.href='checkout.html';">Continue to check out </button>
+        </div>
+        <div class="product-info" id="prod" style="align-items:center; justify-items:center; align-content:center; grid-gap: 2cm; flex-direction: row; text-align:center; display:none">
+            <img src="" width= 150 >
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
 

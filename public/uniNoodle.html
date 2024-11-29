@@ -6,6 +6,7 @@
     <title>Product - henppy Taiwaness Snack</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="items.css">
+    <script src="products.js" defer></script>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
         </div>
         <div>
             <a href="login.html">Log in</a>
-            <a href="cart.html">Cart (0)</a>
+            <a href="cart.html">Cart</a>
         </div>
     </nav>
 
@@ -58,14 +59,14 @@
                 <div class="option-group">
                     <label for="flavor">Flavor:</label>
                     <select id="flavor">
-                        <option value="noodle">noodle</option>
-                        <option value="rice noodle">rice noodle</option>
+                        <option value="uni noodle">noodle</option>
+                        <option value="uni rice noodle">rice noodle</option>
                     </select>
                 </div>
                 <div class="option-group">
                     <label for="package">Package:</label>
                     <select id="package">
-                        <option value="uni noodle pack">Pack of 5 ($2.00)</option>
+                        <option value="Pack of 5 ($2.00)">Pack of 5 ($2.00)</option>
                     </select>
                 </div>
                 <div class="option-group">
@@ -73,7 +74,7 @@
                     <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
                 </div>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" id="addCart">Add to Cart</button>
         </div>
         <div id="message-container" style="margin-top: 10px; font-size: 1rem;"></div>
     </div>

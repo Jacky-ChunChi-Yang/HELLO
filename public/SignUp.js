@@ -1,6 +1,6 @@
 document.onsubmit = (e) => {
     e.preventDefault()
-    if (document.getElementById('password').value === document.getElementById('password_check').value) {console.log('fuck me')
+    if (document.getElementById('password').value === document.getElementById('password_check').value) {console.log('pass')
     var sql = `INSERT INTO Users (first_name,last_name,username,password_hash) VALUES ("${document.getElementById('fname').value}","${document.getElementById('lname').value}","${document.getElementById('username').value}","${document.getElementById('password').value}")`
     const sqlQuery = sql;
 
@@ -14,6 +14,7 @@ document.onsubmit = (e) => {
             .then(response => response.text())  // Get the response text from the server
             .then(data => {
                 console.log('Success:', data);
+                window.location.href = '/login.html'
                 // document.getElementById('response').textContent = data;
             })
             .catch(error => {

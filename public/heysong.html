@@ -6,6 +6,7 @@
     <title>Product - henppy Taiwaness Snack</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="items.css">
+    <script src="products.js" defer></script>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
         </div>
         <div>
             <a href="login.html">Log in</a>
-            <a href="cart.html">Cart (0)</a>
+            <a href="cart.html">Cart</a>
         </div>
     </nav>
 
@@ -60,16 +61,16 @@
                 <div class="option-group">
                     <label for="flavor">Flavor:</label>
                     <select id="flavor">
-                        <option value="original">Original</option>
-                        <option value="salt">salt</option>
+                        <option value="heysong original">Original</option>
+                        <option value="heysong salt">salt</option>
                     </select>
                 </div>
                 <div class="option-group">
                     <label for="package">Package:</label>
                     <select id="package">
-                        <option value="heysong Can">Can ($1.50)</option>
-                        <option value="heysong pack">Pack of 6 ($8.5)</option>
-                        <option value="heysong Big Bottle">Big Bottle ($3)</option>
+                        <option value="Can ($1.50)">Can ($1.50)</option>
+                        <option value="Pack of 6 ($8.5)">Pack of 6 ($8.5)</option>
+                        <option value="Big Bottle ($3)">Big Bottle ($3)</option>
                     </select>
                 </div>
                 <div class="option-group">
@@ -77,7 +78,7 @@
                     <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
                 </div>
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" id="addCart">Add to Cart</button>
         </div>
         <div id="message-container" style="margin-top: 10px; font-size: 1rem;"></div>
     </div>

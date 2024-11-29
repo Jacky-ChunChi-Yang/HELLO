@@ -12,7 +12,8 @@ document.onsubmit = (e) => {
     })
         .then(response => response.text())  // Get the response text from the server
         .then(data => {
-            console.log('Success:', data);
+            localStorage.setItem('id', JSON.parse(data).id); 
+            if(localStorage.getItem('id') > 0) window.location.href = '/index.html'
         })
         .catch(error => {
             console.error('Error:', error);
