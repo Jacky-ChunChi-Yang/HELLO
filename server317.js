@@ -50,12 +50,12 @@ app.post('/login', (req, res) => {
             console.error('Error executing query:', err);
             return res.status(500).send('Error executing query');
         }
-        console.log((result[0].password_hash === req.body.pw), req.body.pw, result[0].password_hash)
-        if (result[0].password_hash === req.body.pw) {
+        // console.log((result[0].password_hash === req.body.pw), req.body.pw, result[0].password_hash)
+        if (result[0]?.password_hash === req.body.pw) {
             r = result[0].user_id
             console.log(r)
         }
-        console.log(r)
+        // console.log(r)
         res.setHeader('Content-Type', 'application/json');
         res.end(JSON.stringify({ id: r }));
     });
@@ -77,7 +77,7 @@ app.post('/executeQuery', (req, res) => {
         }
 
         console.log('Query executed successfully:', result);
-        res.status(200).send('Query executed successfully');
+        res.status(200).send(result);
     });
 });
 
