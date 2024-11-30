@@ -34,73 +34,61 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedOption = packageSelect.value;
         let price;
 
-        if (selectedOption === "weili single bowl") {
+        if (selectedOption === "Single bowl ($2.75)") {//weili
             price = 2.75; 
         } 
-        else if (selectedOption === "weili pack") {
+        else if (selectedOption === "Pack of 4 ($4.99)") {//weili
             price = 4.99; 
         }
-        else if (selectedOption === "want Bag") {
-            price = 8.75; 
-        }
-        else if (selectedOption === "uni noodle pack") {
-            price = 2.00; 
-        }
-        else if (selectedOption === "tea single") {
+        else if (selectedOption === "Single ($3.25)") {//puff
             price = 3.25; 
         }
-        else if (selectedOption === "puff single") {
-            price = 3.25; 
-        }
-        else if (selectedOption === "puff box") {
+        else if (selectedOption === "box for 3 ($9.00)") {//puff
             price = 9.00; 
         }
-        else if (selectedOption === "pieapple cake Small") {
+        else if (selectedOption === "Pack of 6 ($9.99)") {//pineapple cake
             price = 9.99; 
         }
-        else if (selectedOption === "pieapple cake Mid") {
+        else if (selectedOption === "Pack of 9 ($14.99)") {//pineapple cake
             price = 14.99; 
         }
-        else if (selectedOption === "pieapple cake Large") {
+        else if (selectedOption === "Pack of 12 ($27.99)") {//pineapple cake
             price = 27.99; 
         }
-        else if (selectedOption === "pea Bag") {
-            price = 2.99; 
-        }
-        else if (selectedOption === "one more single") {
+        else if (selectedOption === "Single ($2.5)") {//one more
             price = 2.50; 
         }
-        else if (selectedOption === "one more pack") {
+        else if (selectedOption === "Pack of 3 ($7.00)") {//one more
             price = 7.00; 
         }
-        else if (selectedOption === "heysong Can") {
+        else if (selectedOption === "Can ($1.50)") {//heysong
             price = 1.50; 
         }
-        else if (selectedOption === "heysong pack") {
+        else if (selectedOption === "Pack of 6 ($8.5)") {//heysong
             price = 8.50; 
         }
-        else if (selectedOption === "heysong Big Bottle") {
+        else if (selectedOption === "Big Bottle ($3)") {//heysong
             price = 3.00; 
         }
-        else if (selectedOption === "barleytea single") {
+        else if (selectedOption === "Single ($0.89)") {//barleytea
             price = 0.89; 
         }
-        else if (selectedOption === "barleytea pack") {
+        else if (selectedOption === "Pack of 6 ($5.25)k") {//barleytea
             price = 5.25; 
         }
-        else if (selectedOption === "barleytea box") {
+        else if (selectedOption === "Box of 24 ($19.99)") {//barleytea
             price = 19.99; 
         }
-        else if (selectedOption === "barleytea big") {
+        else if (selectedOption === "Big bottle ($5.50)") {//barleytea
             price = 5.50; 
         }
-        else if (selectedOption === "apple soda Can") {
+        else if (selectedOption === "Can ($1.25)") {//apple soda
             price = 1.25; 
         }
-        else if (selectedOption === "apple soda pack") {
+        else if (selectedOption === "Pack of 6 cans ($5.99)") {//apple soda
             price = 5.99; 
         }
-        else if (selectedOption === "apple soda Big Bottle") {
+        else if (selectedOption === "Big Bottle ($4.99)") {//apple soda
             price = 4.99; 
         }
 

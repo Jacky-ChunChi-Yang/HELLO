@@ -1,4 +1,5 @@
 let prod = document.getElementById("prod")
+let totalAmount = 0;
 
 fetch('http://localhost:3000/executeQuery', {
     method: 'POST',
@@ -45,9 +46,24 @@ function layout(data) {
             card.firstElementChild.nextElementSibling.nextElementSibling.innerHTML = dat.product_package
             card.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = item.quantity
             card.style.display = "flex"
-        })
+            totalAmount += dat.price * item.quantity;
+            displayTotalAmount();
+        })     
         .catch(error => {
             console.error('Error:', error);
         });
     })
+}
+
+function displayTotalAmount() {
+    let totalDisplay = document.getElementById("totalAmountDisplay");
+    if (!totalDisplay) {
+        totalDisplay = document.createElement("div");
+        totalDisplay.id = "totalAmountDisplay";
+        totalDisplay.style.fontSize = "large";
+        totalDisplay.style.marginTop = "20px";
+        totalDisplay.style.textAlign = "center";
+        prod.parentElement.appendChild(totalDisplay);
+    }
+    totalDisplay.innerHTML = `Total Amount: $${totalAmount.toFixed(2)}`;
 }

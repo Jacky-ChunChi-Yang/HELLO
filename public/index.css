@@ -69,8 +69,8 @@ nav .dropdown-content a:hover {
 
 .banner {
     width: 100%;
-    height: 200px;
-    background: url('head.jpg') center center/cover no-repeat;
+    height: 550px;
+    background: url('pic/22.jpg') center center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

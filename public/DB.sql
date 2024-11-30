@@ -116,7 +116,6 @@ CREATE TABLE Cart_Item(
 CREATE TABLE Transactions (
     transaction_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
-    payment_method ENUM('Credit Card', 'PayPal', 'Other') NOT NULL,
     card_number VARCHAR(16),
     card_holder_name VARCHAR(100),
     expiration_date VARCHAR(5),
@@ -130,7 +129,8 @@ CREATE TABLE ShippingInfo (
     order_id INT NOT NULL,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    address VARCHAR(255) NOT NULL,
+    address_1 VARCHAR(255) NOT NULL,
+    address_2 VARCHAR(255),
     city VARCHAR(50) NOT NULL,
     state VARCHAR(50) NOT NULL,
     zip_code VARCHAR(10) NOT NULL,

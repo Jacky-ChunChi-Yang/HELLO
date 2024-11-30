@@ -15,7 +15,6 @@ document.onsubmit = (e) => {
             .then(data => {
                 console.log('Success:', data);
                 window.location.href = '/login.html'
-                // document.getElementById('response').textContent = data;
             })
             .catch(error => {
                 console.error('Error:', error);
