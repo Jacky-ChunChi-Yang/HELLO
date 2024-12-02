@@ -7,7 +7,7 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="items.css">
-    <!-- <script src="CheckOut.js" defer></script> -->
+    <script src="CheckOut.js" defer></script>
 </head>
 <body>
     <header>
@@ -38,16 +38,16 @@
             <p style="font-size:x-large; color:#333">Placing order...</p><br>
             <form style="font-size: larger;">
                 <p>---------- Shipping information ----------</p>
-                <input type="text" id="fname" name="fname" size="20" style="font-size: large;" placeholder="First name" required>
+                <input type="text" id="Shipping_fname" name="fname" size="20" style="font-size: large;" placeholder="First name" required>
                 &ensp;
-                <input type="text" id="lname" name="lname" size="20" style="font-size: large;" placeholder="Last name" required><br><br>
-                <input type="text" id="address" name="address" size="44"placeholder="Street Address" style="font-size: large;" required><br><br>
-                <input type="text" id="address2" name="address2" size="44"placeholder="Street Address 2 (Optional)" style="font-size: large;"><br><br>
-                <input type="text" id="city" name="city" size="10" placeholder="City" style="font-size: large;" required>
+                <input type="text" id="Shipping_lname" name="lname" size="20" style="font-size: large;" placeholder="Last name" required><br><br>
+                <input type="text" id="Shipping_address" name="address" size="44"placeholder="Street Address" style="font-size: large;" required><br><br>
+                <input type="text" id="Shipping_address2" name="address2" size="44"placeholder="Street Address 2 (Optional)" style="font-size: large;"><br><br>
+                <input type="text" id="Shipping_city" name="city" size="10" placeholder="City" style="font-size: large;" required>
                 &emsp;
-                <input type="text" id="state" name="state" size="10" placeholder="State" style="font-size: large;" required>
+                <input type="text" id="Shipping_state" name="state" size="10" placeholder="State" style="font-size: large;" required>
                 &emsp;
-                <input type="text" id="zipcode" name="zipcode" size="8" placeholder="Zipcode" style="font-size: large;" pattern="[0-9]{5}" required><br><br>
+                <input type="text" id="Shipping_zipcode" name="zipcode" size="8" placeholder="Zipcode" style="font-size: large;" pattern="[0-9]{5}" required><br><br>
                 <input type="tel" id="phone" name="phone" size="44" placeholder="Phone number" style="font-size: large;" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
                 <p>---------- Credit card information ----------</p>
                 <input type="cardnumber" id="cardnumber" name="cardnumber" size="44" placeholder="Card number" style="font-size: large;" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required><br><br>
@@ -56,13 +56,13 @@
                 <input type="text" id="cvc" name="cvc" size="20" placeholder="CVV/CVC" style="font-size: large;" pattern="[0-9]{3}" required><br><br>
                 <input type="text" id="cardname" name="cardname" size="44" placeholder="Name on card" style="font-size: large;" required><br><br>
                 <p style="font-size:small">---------- billing address ----------</p>
-                <input type="text" id="address" name="address" size="44"placeholder="Street Address" style="font-size: large;" required><br><br>
-                <input type="text" id="address2" name="address2" size="44"placeholder="Street Address 2 (Optional)" style="font-size: large;"><br><br>
-                <input type="text" id="city" name="city" size="10" placeholder="City" style="font-size: large;" required>
+                <input type="text" id="billing_address" name="address" size="44"placeholder="Street Address" style="font-size: large;" required><br><br>
+                <input type="text" id="billing_address2" name="address2" size="44"placeholder="Street Address 2 (Optional)" style="font-size: large;"><br><br>
+                <input type="text" id="billing_city" name="city" size="10" placeholder="City" style="font-size: large;" required>
                 &emsp;
-                <input type="text" id="state" name="state" size="10" placeholder="State" style="font-size: large;" required>
+                <input type="text" id="billing_state" name="state" size="10" placeholder="State" style="font-size: large;" required>
                 &emsp;
-                <input type="text" id="zipcode" name="zipcode" size="8" placeholder="Zipcode" style="font-size: large;" pattern="[0-9]{5}" required><br><br>
+                <input type="text" id="billing_zipcode" name="zipcode" size="8" placeholder="Zipcode" style="font-size: large;" pattern="[0-9]{5}" required><br><br>
                 <button onclick="submit">Place my order</button>
             </form>
         </div>
