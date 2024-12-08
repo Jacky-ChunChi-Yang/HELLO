@@ -1,10 +1,11 @@
 DROP table ShippingInfo cascade;
 DROP table Transactions cascade;
+DROP table Orders cascade;
+DROP table Problems cascade;
 DROP table OrderDetails cascade;
 DROP table Cart_Item cascade;
 DROP table Products cascade;
 DROP table Categories cascade;
-DROP table Orders cascade;
 DROP table Users cascade;
 
 CREATE TABLE Users (
@@ -14,6 +15,13 @@ CREATE TABLE Users (
     username VARCHAR(50) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Problems (
+    problems_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(50) UNIQUE NOT NULL,
+    customer_email VARCHAR(50) UNIQUE NOT NULL,
+    questions VARCHAR(500) UNIQUE NOT NULL
 );
 
 CREATE TABLE Categories (

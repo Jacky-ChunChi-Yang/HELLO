@@ -1,7 +1,6 @@
-const { query } = require("express");
-
 let prod = document.getElementById("prod")
 let totalAmount = 0;
+
 fetch('http://localhost:3000/executeQuery', {
     method: 'POST',
     headers: {
@@ -104,40 +103,4 @@ function displayTotalAmount() {
         prod.parentElement.appendChild(totalDisplay);
     }
     totalDisplay.innerHTML = `Total Amount: $${totalAmount.toFixed(2)}`;
-}
-
-document.getElementById('checkout-button').onclick = ()=>{
-    fetch('http://localhost:3000/executeQuery', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            query: `select * from cart_item WHERE user_id = ${userId}  `
-        })
-    })
-    .then(response => response.text())
-    .then(data => {
-        data = JSON.parse(data)         
-        data = data[0]
-        fetch('http://localhost:3000/executeQuery', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                query: `INSERT INTO OrderDetails (order_id, product_id, quantity, price) VALUES (data.product_id,data.quantity, data.price)`
-            })
-        })
-        .then(response => response.text())
-        .then(data => {
-            
-        })
-        .catch(error => {
-            console.error('Error while removing item:', error);
-        });
-    })
-    .catch(error => {
-        console.error('Error while removing item:', error);
-    });
 }

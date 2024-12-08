@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <p style="font-size:xx-large">Login</p>
+        <p style="font-size:xx-large">Account</p>
     </header>
     <nav>
         <div>
@@ -29,7 +29,7 @@
             <a href="contact.html">Contact Us</a>
         </div>
         <div>
-            <a href="login.html">Log in</a>
+            <a href="login.html">Account</a>
             <a href="cart.html">Cart</a>
         </div>
     </nav>
@@ -41,9 +41,13 @@
                 <input type="password" id="password" name="password" size="30" placeholder="Password" style="font-size: large;" required><br><br>
                 <button onclick="submit">Sign in</button>
             </form>
+            <p id="error-message" style="color: red; font-size: large; display: none;">Invalid username or password.</p>
+            <p id="logout-container" style="display: none;">
+                <button id="logout-button" onclick="logout()">Log out</button>
+            </p>
             <br><br><p>---------- Don't have an account? Sign up here! ----------</p>
             <button onclick="location.href='signup.html';">Create new account </button>
         </div>
     </div>
-
+    
 </body>

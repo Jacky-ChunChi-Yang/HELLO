@@ -7,6 +7,7 @@
     <title>Contact us</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="items.css">
+    <script src="Contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,7 +29,7 @@
             <a href="contact.html">Contact Us</a>
         </div>
         <div>
-            <a href="login.html">Log in</a>
+            <a href="login.html">Account</a>
             <a href="cart.html">Cart</a>
         </div>
     </nav>
@@ -37,7 +38,8 @@
             <p style="font-size:x-large; color:#333">Contact us</p>
             <form>
                 <input type="text" id="name" name="name" size="20" placeholder="Name" style="font-size: large;"><br><br>
-                <textarea name="message" rows="10" cols="30" placeholder="Describe your problem..." style="font-size: large;"></textarea><br><br>
+                <input type="email" id="email" name="email" size="20" placeholder="Email" style="font-size: large;"><br><br>
+                <textarea name="message" id="questions" rows="10" cols="30" placeholder="Describe your problem..." style="font-size: large;" required></textarea><br><br>
                 <button onclick="submit">Submit</button>
             </form>
         </div>

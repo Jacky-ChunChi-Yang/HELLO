@@ -21,4 +21,9 @@ document.onsubmit = (e) => {
             });
 
 }
+    else{
+        let errorMessage = document.getElementById('error-message'); 
+        errorMessage.textContent = 'Passwords do not match.';
+        errorMessage.style.display = 'block';
+    }
 }
