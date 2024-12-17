@@ -1,5 +1,5 @@
 document.onsubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     let pw = document.getElementById('password').value
     let un = document.getElementById('username').value
     let errorMessage = document.getElementById('error-message');
